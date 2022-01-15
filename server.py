@@ -24,7 +24,7 @@ def text_cleaning(data):
     return corpus
 
 # setting up flask name........
-app=Flask(__name__)
+server=Flask(__name__)
 
 
 #loading pkl files.............
@@ -54,4 +54,4 @@ def predict():
         else:
             return render_template('home.html', prediction=[1])
 if __name__ == "__main__":
-    app.run(debug=True)
+    server.run(debug=True)
