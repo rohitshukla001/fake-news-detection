@@ -24,7 +24,7 @@ def text_cleaning(data):
     return corpus
 
 # setting up flask name........
-app=Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 
 #loading pkl files.............
