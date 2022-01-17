@@ -32,16 +32,16 @@ model = joblib.load("model.pkl")
 vector =joblib.load("vector.pkl")
 
 #creating first app........
-@app.route('/')
+@app.route('/',methods=['POST','GET'])
 def home():
     return render_template('home.html')
-@app.route('/about')
+@app.route('/about',methods=['POST','GET'])
 def about():
     return render_template('about.html')
 
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST', 'GET'])
 def predict():
     if request.method == 'POST':
         messagen = request.form['message']
